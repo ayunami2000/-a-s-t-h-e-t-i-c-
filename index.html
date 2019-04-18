@@ -15,7 +15,7 @@
 <image xlink:href="" width="100%" height="100%" x="0" y="0" filter="url(#filter)"></image>
 </svg>
 <script>
-document.querySelector('image').setAttribute("xlink:href",prompt("url")||"https://giffiles.alphacoders.com/820/820.gif");
+document.querySelector('image').setAttribute("xlink:href",prompt("url\nsample urls: \"coolgif[1-5].gif\"")||"820.gif");
 var w=false;
 setInterval((d,c,m)=>{
 d.setAttribute("xChannelSelector",c[Math.floor(Math.random()*3)]);
