@@ -13,9 +13,10 @@
 	<feGaussianBlur stdDeviation="12.5 0" x="0%" y="0%" width="100%" height="100%" in="blend" edgeMode="none" result="blur1"/>
 </filter>
 </svg>
-<iframe src="https://www.bing.com" style="filter:url(#filter);cursor:none;background:black;padding:0;margin:0;border:0;display:block;width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;">loading...</iframe>
+<video playsinline autoplay style="filter:url(#filter);cursor:none;background:black;padding:0;margin:0;border:0;display:block;width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;"></video>
 <script>
-//document.querySelector('image').setAttribute("xlink:href",window.location.hash.length>1?window.location.hash.slice(1):(prompt("Enter URL:\nSample URLs: \"coolgif[1-5].gif\"\n\nTIP: Try adding \"#[img url]\" to the end of the page URL.")||"820.gif"));
+async function getMedia(){try{document.querySelector('video').srcObject=await navigator.mediaDevices.getUserMedia({audio:false,video:true});}catch(err){}}
+getMedia();
 var w=false;
 setInterval((d,c,m)=>{
 d.setAttribute("xChannelSelector",c[Math.floor(Math.random()*3)]);
